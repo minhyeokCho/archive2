@@ -1,5 +1,6 @@
 @charset "utf-8";
-.container {padding-top: 24.5rem;}
+.container {background: url(../images/common/map.png) no-repeat right top; padding-top: 24.5rem; padding-bottom: 12rem;}
+
 .sec_tit {border-top:4px solid #222326; padding-top: 1.2rem; font-size: 2rem; color: #404c64; font-weight: bold;}
 .main_search_wrap {margin: 8rem auto 18rem; max-width: 1200px; padding: 0 9rem;}
 .main_search_wrap h2 {font-size: 6rem; letter-spacing: -1px; color: #484848; font-weight: bold;}
@@ -7,7 +8,7 @@
 .main_search {display: flex; align-items: center; gap:4rem;}
 .main_search span {font-size: 6rem; letter-spacing: -1px; color: #484848; font-weight: bold;}
 .main_search .search {flex:1;}
-.main_search .search .search_txt {height: 5rem; border-color: #404c64;}
+.main_search .search .search_txt {font-size: 1.8rem; padding-left: 0; height: 5rem; border-color: #404c64;}
 
 .collection_area {padding-top: 5rem; display: flex; gap:3rem; flex-wrap: wrap;}
 .collection_area li {width: calc(25% - (9rem / 4));}
@@ -28,18 +29,22 @@
 .collection_area .type_02 .label {background-color: #f75272;}
 
 @media only screen and (max-width: 1240px) { /* 테블릿 */
+	.container {padding-top: 15rem;background-size: 90% auto;}
 	.collection_area {gap:2rem}
 	.collection_area li {width: calc(33.33% - (4rem / 3));}
 
 }
 @media only screen and (max-width: 767px) { /* 모바일 */
-	.main_search_wrap {padding: 0 2rem; width: 80%;}
-	.main_search_wrap h2 {font-size: 30px; text-align: center;}
+	.container {padding-top: 12rem; background-size: 100% auto; background-position: right top 50px;}
+	
+	.main_search_wrap {padding: 0; margin-bottom: 10rem; width: 270px;}
+	.main_search_wrap h2 {font-size: 27px; text-align: center;}
 	.main_search_wrap h2 span {display: inline-block;}
 	.main_search {margin-top: 2rem;}
 	.main_search span {display: none;}
 
 	.collection_area {gap:1.5rem}
 	.collection_area li {width: calc(50% - (1.5rem / 2));}
-	.collection_area li a figure.img {height: 25rem}
+	.collection_area li a figure.img {height: 22rem}
+	.collection_area li a .label {font-size: 1.8rem;}
 }	

@@ -71,7 +71,7 @@ img {display: block;}
 .f_menu_wrap .inner > a {margin-right: auto; color: #454545; font-weight: bold;}
 .f_menu_wrap .site_template {display: flex; }
 .f_menu_wrap .f_menu {position: relative;}
-.f_menu_wrap .f_menu ul {display: none; position: absolute; left: 0; bottom: 100%; width: 100%; border: 2px solid #3a3d72;}
+.f_menu_wrap .f_menu ul {display: none; position: absolute; left: 0; bottom: 100%; width: 100%; border: 2px solid #3a3d72; z-index: 1;}
 .f_menu_wrap .f_menu ul li a {padding: 1.2rem 2.5rem; width: 100%; display: block; transition: .3s; background-color: #fff;}
 .f_menu_wrap .f_menu ul li a:hover {background-color: #f0f2f7;}
 .f_menu_wrap .f_menu ul li ~ li a {border-top:1px solid #cfcfcf;}
