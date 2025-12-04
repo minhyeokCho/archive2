@@ -6,14 +6,10 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>근현대 기록문화 아카이브</title>
 	<link rel="stylesheet" href="./resources/css/reset.css" />
-	<link rel="stylesheet" href="./resources/css/swiper-bundle.min.css" />
-	<link rel="stylesheet" href="./resources/css/aos.css" />
 	<link rel="stylesheet" href="./resources/css/common.css" />
 	<link rel="stylesheet" href="./resources/css/sub.css" />
 	<link rel="stylesheet" href="./resources/css/main.css" />
 	<script src="./resources/js/jquery-3.6.0.js"></script>
-	<script src="./resources/js/swiper-bundle.min.js"></script>
-	<script src="./resources/js/aos.js"></script>
 	<script src="./resources/js/common.js"></script>
 </head>
 <body>
@@ -54,9 +50,9 @@
 		
 		<!-- 검색레이어 -->
 		<div class="search_layer">
-			<div class="serach serach_wrap">
-				<input type="text" class="serach_txt" placeholder="검색어를 입력하세요">
-				<button type="button" title="검색" class="serach_btn"></button>
+			<div class="search search_wrap">
+				<input type="text" class="search_txt" placeholder="검색어를 입력하세요">
+				<button type="button" title="검색" class="search_btn"></button>
 			</div>
 			<button type="button" class="btn_close" title="닫기"></button>
 		</div>
@@ -77,75 +73,100 @@
 
 	<!-- 메인 -->
 	<main class="container">
-		<section class="sec_01">
-			<div class="sec_tit">
-				자료검색<br/>Archive
-			</div>
-			<div class="main_search">
-				<h2>
-					근현대 기록 자료
-				</h2>
-				<div class="serach_wrap">
-					<input type="text" placeholder="검색어를 입력하세요">
-					<button type="button" title="검색"></button>
+		<div class="inner">
+			<section class="sec_01">
+				<div class="sec_tit">
+					자료검색<br/>Archive
 				</div>
-			</div>
-		</section>
-		<section class="sec_02">
-			<div class="sec_tit">
-				안동여지도<br/>Collection
-			</div>
-			<ul class="collection_area">
-				<li class="type_01">
-					<a href="#">
-						<figure class="img">
-							<img src="./resources/images/temp/collection_01.png" alt="">
-						</figure>
-						<p class="label">도산의 아름다운 길</p>
-						<div class="arr">
-							<strong>도산면</strong>
-							<span>Collection</span>
+				<div class="main_search_wrap">
+					<h2>
+						근현대 기록 자료 <span>찾아보기</span>
+					</h2>
+					<div class="main_search">
+						<span>찾아보기</span>
+						<div class="search">
+							<input type="text" class="search_txt" placeholder="검색어를 입력하세요">
+							<button type="button" class="search_btn" title="검색"></button>
 						</div>
-					</a>
-				</li>
-				<li class="type_02">
-					<a href="#">
-						<figure class="img">
-							<img src="./resources/images/temp/collection_02.png" alt="">
-						</figure>
-						<p class="label">그때 그 시절 중구동</p>
-						<div class="arr">
-							<strong>중구로</strong>
-							<span>Collection</span>
-						</div>
-					</a>
-				</li>
-				<li class="type_01">
-					<a href="#">
-						<figure class="img">
-							<img src="./resources/images/temp/collection_01.png" alt="">
-						</figure>
-						<p class="label">풍산의 아름다운 길</p>
-						<div class="arr">
-							<strong>풍산읍</strong>
-							<span>Collection</span>
-						</div>
-					</a>
-				</li>
-				<li class="type_02">
-					<a href="#">
-						<figure class="img">
-							<img src="./resources/images/temp/collection_02.png" alt="">
-						</figure>
-						<p class="label">그때 그 시절 태화동</p>
-						<div class="arr">
-							<strong>태화동</strong>
-							<span>Collection</span>
-						</div>
-					</a>
-				</li>
-			</ul>
-		</section>
+					</div>
+				</div>
+			</section>
+			<section class="sec_02">
+				<div class="sec_tit">
+					안동여지도<br/>Collection
+				</div>
+				<ul class="collection_area">
+					<li class="type_01">
+						<a href="#">
+							<figure class="img">
+								<img src="./resources/images/temp/histroy_01.png" alt="">
+							</figure>
+							<p class="label">도산의 아름다운 길</p>
+							<div class="arr">
+								<i>
+									<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="19px" height="14.217px" viewBox="0 0 19 14.217" enable-background="new 0 0 19 14.217" xml:space="preserve"><polygon points="12.982,14.217 10.573,12.111 14.104,8.828 0,8.828 0,5.447 14.104,5.447 10.573,2.184 12.982,0 19,7.138 " fill="#2bacb0"/></svg>
+								</i>
+								<div>
+									<strong>도산면</strong>
+									<span>Collection</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="type_02">
+						<a href="#">
+							<figure class="img">
+								<img src="./resources/images/temp/histroy_02.png" alt="">
+							</figure>
+							<p class="label">그때 그 시절 중구동</p>
+							<div class="arr">
+								<i>
+									<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="19px" height="14.217px" viewBox="0 0 19 14.217" enable-background="new 0 0 19 14.217" xml:space="preserve"><polygon points="12.982,14.217 10.573,12.111 14.104,8.828 0,8.828 0,5.447 14.104,5.447 10.573,2.184 12.982,0 19,7.138 " fill="#f75272"/></svg>
+								</i>
+								<div>
+									<strong>중구로</strong>
+									<span>Collection</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="type_01">
+						<a href="#">
+							<figure class="img">
+								<img src="./resources/images/temp/histroy_03.png" alt="">
+							</figure>
+							<p class="label">풍산의 아름다운 길</p>
+							<div class="arr">
+								<i>
+									<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="19px" height="14.217px" viewBox="0 0 19 14.217" enable-background="new 0 0 19 14.217" xml:space="preserve"><polygon points="12.982,14.217 10.573,12.111 14.104,8.828 0,8.828 0,5.447 14.104,5.447 10.573,2.184 12.982,0 19,7.138 " fill="#2bacb0"/></svg>
+								</i>
+								<div>
+									<strong>풍산읍</strong>
+									<span>Collection</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="type_02">
+						<a href="#">
+							<figure class="img">
+								<img src="./resources/images/temp/histroy_04.png" alt="">
+							</figure>
+							<p class="label">그때 그 시절 태화동</p>
+							<div class="arr">
+								<i>
+									<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="19px" height="14.217px" viewBox="0 0 19 14.217" enable-background="new 0 0 19 14.217" xml:space="preserve"><polygon points="12.982,14.217 10.573,12.111 14.104,8.828 0,8.828 0,5.447 14.104,5.447 10.573,2.184 12.982,0 19,7.138 " fill="#f75272"/></svg>
+								</i>
+								<div>
+									<strong>태화동</strong>
+									<span>Collection</span>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</section>
+		</div>
 	</main>
 	<!--// 메인 -->
 
@@ -178,7 +199,7 @@
 				<div class="dt_content">
 					<div class="img_dt_area">
 						<figure class="img">
-							<img src="./resources/images/temp/car.jpg" alt="">
+							<img src="./resources/images/temp/collection_01.png" alt="">
 						</figure>
 						<div class="arr_wrap">
 							<button class="btn_slide_prev"></button>
@@ -264,9 +285,9 @@
 							</div>
 							<p class="desc">검색 범위를 체크박스로 선택한 뒤 검색어를 입력하세요.</p>
 							<p class="desc">검색어를 입력하지 않고 검색 버튼을 누르면, 선택한 분류 전체 자료가 조회됩니다.</p>
-							<div class="serach tab_search">
-								<input type="text" class="serach_txt" placeholder="검색어를 입력하세요">
-								<button type="button" class="serach_btn"></button>
+							<div class="search tab_search">
+								<input type="text" class="search_txt" placeholder="검색어를 입력하세요">
+								<button type="button" class="search_btn"></button>
 							</div>
 						</li>
 					</ul>
@@ -283,7 +304,7 @@
 						<li>
 							<a href="#">
 								<figure class="img">
-									<img src="./resources/images/temp/car.jpg" alt="">
+									<img src="./resources/images/temp/archive_01.png" alt="">
 								</figure>
 								<p>1984년 이동해 어르신 어머니 칠순잔치</p>
 							</a>
@@ -315,7 +336,7 @@
 						<li>
 							<a href="#">
 								<figure class="img">
-									<img src="./resources/images/temp/archive_05.png">
+									<img src="./resources/images/temp/archive_01.png">
 								</figure>
 								<p>1990년대 내살미 이동해 어르신 큰집 조카</p>
 							</a>
@@ -323,7 +344,7 @@
 						<li>
 							<a href="#">
 								<figure class="img">
-									<img src="./resources/images/temp/archive_06.png">
+									<img src="./resources/images/temp/archive_02.png">
 								</figure>
 								<p>1990년대 내살미 이동해 어르신 큰집 조카1990년대 내살미 이동해 어르신 큰집 조카</p>
 							</a>
@@ -331,7 +352,7 @@
 						<li>
 							<a href="#">
 								<figure class="img">
-									<img src="./resources/images/temp/archive_07.png">
+									<img src="./resources/images/temp/archive_03.png">
 								</figure>
 								<p>1990년대 내살미 이동해 어르신 큰집 조카</p>
 							</a>
@@ -339,7 +360,7 @@
 						<li>
 							<a href="#">
 								<figure class="img">
-									<img src="./resources/images/temp/archive_08.png">
+									<img src="./resources/images/temp/archive_04.png">
 								</figure>
 								<p>1990년대 내살미 이동해 어르신 큰집 조카</p>
 							</a>
@@ -396,7 +417,7 @@
 									</figure>
 									<ul class="inner_list">
 										<li>기억의 보고(寶庫), 한국국학진흥원</li>
-										<li>기억의 보고(寶庫), 한국국학진흥원</li>
+										<li>예술과 끼가 넘치는 예끼마을</li>
 									</ul>
 								</li>
 							</ol>
@@ -404,16 +425,19 @@
 						<div class="item">
 							<div class="order_tit">
 								<strong>02</strong>
-								<p>기억이 흐르는 가람길</p>
+								<p>녹음에 안긴 잎새길</p>
 							</div>
 							<ol class="order_list">
 								<li>
 									<figure class="img collection_img">
-										<img src="./resources/images/temp/collection_01.png" alt="">
+										<img src="./resources/images/temp/collection_02.png" alt="">
 									</figure>
 									<ul class="inner_list">
-										<li>기억의 보고(寶庫), 한국국학진흥원</li>
-										<li>기억의 보고(寶庫), 한국국학진흥원</li>
+										<li>하늘을 꿈꾼 소년, 이일영</li>
+										<li>다채로운 숲의 변화, 산림문화체험센터</li>
+										<li>숲속에서 하룻밤, 안창호반자연휴양림</li>
+										<li>달빛이 흐르는 월천</li>
+										<li>‘쉼休’ - 복합문화관광단지</li>
 									</ul>
 								</li>
 							</ol>
@@ -421,20 +445,26 @@
 						<div class="item">
 							<div class="order_tit">
 								<strong>03</strong>
-								<p>기억이 흐르는 가람길</p>
+								<p>퇴계를 품은 해솔길</p>
 							</div>
 							<ol class="order_list">
 								<li>
 									<figure class="img collection_img">
-										<img src="./resources/images/temp/collection_01.png" alt="">
+										<img src="./resources/images/temp/collection_03.png" alt="">
 									</figure>
 									<ul class="inner_list">
-										<li>기억의 보고(寶庫), 한국국학진흥원</li>
+										<li>도산서원과 시사단</li>
+										<li>퇴계종택</li>
+										<li>퇴계 이황 묘소</li>
+										<li>동암종택</li>
+										<li>하계마을 독립운동기적비</li>
+										<li>도산국민학교 터</li>
+										<li>번남고택</li>
 										<li>
 											‘쉼休’
 											<div class="sub_desc">
-												<p>기억의 보고(寶庫), 한국국학진흥원</p>
-												<p>기억의 보고(寶庫), 한국국학진흥원</p>
+												<p> 의인섬마을 옛풍경</p>
+												<p> 푸른 물결이 가득한 청보리 축제 푸른 물결이 가득한 청보리 축제</p>
 											</div>
 										</li>
 									</ul>
@@ -443,40 +473,53 @@
 						</div>
 					</div>
 					<div class="group">
-						<div class="item ">
+						<div class="item item3">
 							<div class="order_tit">
 								<strong>04</strong>
-								<p>기억이 흐르는 가람길</p>
+								<p>원도심의 어제와 오늘</p>
 							</div>
-							<ol class="order_list item3">
+							<ol class="order_list ">
 								<li>
 									<h4>우여곡절</h4>
 									<figure class="img collection_img">
-										<img src="./resources/images/temp/collection_01.png" alt="">
+										<img src="./resources/images/temp/collection_04.png" alt="">
 									</figure>
 									<ul class="inner_list">
-										<li>기억의 보고(寶庫), 한국국학진흥원</li>
-										<li>기억의 보고(寶庫), 한국국학진흥원</li>
+										<li>800년을 한결같이 도심의 근린공원 노거수(老巨樹)가 바라본 동부동</li>
+										<li>노블레스 오블리주 임청각과 법흥사지 칠층 전탑 법흥동</li>
+										<li>안동 민주화 운동의 상징 목성동</li>
+										<li>근대공간의 삼산동</li>
+										<li>역사의 뒤안길로 사라진 안동철교 천리동</li>
+										<li>강물은 무심히 흐르고 영호루</li>
+										<li>강을 건너고 세월을 나르는 낙동강, 반변청</li>
 									</ul>
 								</li>
 								<li>
-									<h4>우여곡절</h4>
+									<h4>걷는 동네</h4>
 									<figure class="img collection_img">
-										<img src="./resources/images/temp/collection_01.png" alt="">
+										<img src="./resources/images/temp/collection_05.png" alt="">
 									</figure>
 									<ul class="inner_list">
-										<li>기억의 보고(寶庫), 한국국학진흥원</li>
-										<li>기억의 보고(寶庫), 한국국학진흥원</li>
+										<li>고려에서 근대까지 시간여행 북문동</li>
+										<li>밤나무가 많아 밤적골 율세동</li>
+										<li>오래된 가게, 오래된 이야기</li>
+										<li>달-빛 풍경 핫플레이스 상아동</li>
+										<li>숙박의 메카 동문동</li>
+										<li>사계절 축제</li>
 									</ul>
 								</li>
 								<li>
-									<h4>우여곡절</h4>
+									<h4>도시 재생</h4>
 									<figure class="img collection_img">
-										<img src="./resources/images/temp/collection_01.png" alt="">
+										<img src="./resources/images/temp/collection_06.png" alt="">
 									</figure>
 									<ul class="inner_list">
-										<li>기억의 보고(寶庫), 한국국학진흥원</li>
-										<li>기억의 보고(寶庫), 한국국학진흥원</li>
+										<li>1988 찜닭과 막창의 반란 남문동</li>
+										<li>슬기로운 음주생활</li>
+										<li>빵지순례 남부동</li>
+										<li>떡볶이 자시러 왔니껴 서부동</li>
+										<li>100년의 기록, 안동역을 돌아보다 운흥동</li>
+										<li>6·25 기억의 편편</li>
 									</ul>
 								</li>
 							</ol>

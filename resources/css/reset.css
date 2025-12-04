@@ -27,22 +27,6 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video, input, textarea, button {color: #404c64; margin: 0;padding: 0;border: 0;font: inherit;vertical-align: baseline;font-family: 'Pretendard GOV','맑은고딕','나눔고딕', '돋움', sans-serif;}
 input:focus {outline:none;}
 
-
-.his_scroll .s_inner::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-}
-.his_scroll .s_inner::-webkit-scrollbar-track {
-    background: #d8d8d7;
-    border-radius: 3px;
-}
-.his_scroll .s_inner::-webkit-scrollbar-thumb {
-    background: #f48216; 
-    border-radius: 3px;
-    border:1px solid #d8d8d7;
-}
-
-
 ::-webkit-input-placeholder {
 	color:#404c64;
 	font:inherit;

@@ -24,7 +24,7 @@
 .sub_tit_area .sub_btn .btn_share::before { content: ''; position: absolute; left: 50%; transform: translateX(-50%); top: calc(100% + 2rem - .1rem); width: 0; height: 0; border-left: 1rem solid transparent; border-right: 1rem solid transparent; border-bottom: 1rem solid #d2d2d2; z-index: 10; pointer-events: none; display: none; }
 .sub_tit_area .sub_btn .btn_share::after { content: ''; position: absolute; left: 50%; transform: translateX(-50%); top: calc(100% + 2rem); width: 0; height: 0; border-left: .9rem solid transparent; border-right: .9rem solid transparent; border-bottom: .9rem solid #ffffff; z-index: 11; pointer-events: none; display: none; }
 
-.sub_tit_area .sub_btn .sns_tooltip { display: none; position: absolute; left: 50%; transform: translateX(-50%); top: calc(100% + 2.7rem); padding: 2rem 2.5rem; filter: drop-shadow(7.5px 12.99px 5px rgba(0,0,0,0.1)); background-color: #ffffff; border: .1rem solid #d2d2d2; border-radius: 1rem;}
+.sub_tit_area .sub_btn .sns_tooltip { display: none; position: absolute; left: 50%; transform: translateX(-50%); top: calc(100% + 2.7rem); padding: 2rem 2.5rem; filter: drop-shadow(0.75rem 1.2rem 0.5rem rgba(0,0,0,0.1)); background-color: #ffffff; border: .1rem solid #d2d2d2; border-radius: 1rem;}
 .sub_tit_area .sub_btn .sns_tooltip ul { display: flex; gap:1.5rem; align-items: center; height: 100%; width: 100%; justify-content: space-between;}
 .sub_tit_area .sub_btn .btn_share.active-tooltip::before, .sub_tit_area .sub_btn .btn_share.active-tooltip::after { display: block; }
 .dt_content {padding: 0 4rem; margin-top: 6rem; border-top: 1px solid #d7d7d7;}
@@ -88,7 +88,7 @@
 .paging_wrap .paging .prev {margin-right: 1.2rem; padding-left: 1.2rem; font-size: 1.3rem; color: #666; position: relative;}
 .paging_wrap .paging .prev::before {display: block; content: ''; background: url(../images/common/arr_paging.svg) no-repeat; background-size: .4rem auto; transform: rotate(180deg); position: absolute; left: 0; top: calc(50% - .4rem); width: .4rem; height: .7rem;}
 .paging_wrap .paging .next {margin-left: 1.2rem; padding-right: 1.2rem; font-size: 1.3rem; color: #666; background: url(../images/common/arr_paging.svg) no-repeat right center; background-size: .4rem auto;}
-.paging_wrap .paging .pc_paging > * {display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #333; width: 2.9rem; height: 2.9rem; border-radius: 4px;}
+.paging_wrap .paging .pc_paging > * {display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #333; width: 2.9rem; height: 2.9rem; border-radius: .4rem;}
 .paging_wrap .paging .num.active {background-color: #e4e4e4;}
 .go_paging {margin-top: 3rem; gap:1.5rem; display: flex; align-items: center; justify-content: center;} 
 .go_paging input {width: 3.4rem; height: 3.4rem; border-radius: 2px; background-color: #ffffff; border: 1px solid #c6c6c6; text-align: center;font-size: 1.4rem; color: #333;}
@@ -101,8 +101,8 @@
 .collection_list .group ~ .group {margin-top: 6rem;}
 .collection_list .item {flex:1;}
 
-.collection_list .item .order_list.item3 {display: flex; flex-wrap: wrap; gap:4rem}
-.collection_list .item .order_list.item3 > li {width: calc(33.33% - (8rem / 3));}
+.collection_list .item.item3 .order_list {display: flex; flex-wrap: wrap; gap:4rem}
+.collection_list .item.item3 .order_list > li {width: calc(33.33% - (8rem / 3));}
 .collection_list .item .order_list h4 {margin-top: 5rem; font-size: 2.6rem; color: #333333; font-weight: 800;}
 
 .order_tit {display: flex; gap:3rem}
@@ -127,6 +127,10 @@
 	.img_list_wrap ul li {width: calc(33.33% - 1.333rem);}
 	.img_list_wrap ul li a figure.img  {height: 23.2rem;}
 
+	.collection_list .group {gap:2rem;}
+	.collection_list .item.item3 .order_list {gap:2rem;}
+	.collection_list .item.item3 .order_list > li {width: calc(33.33% - (4rem / 3));}
+
 }
 @media only screen and (max-width: 767px) { /* 모바일 */
 	.sub_tit_area .sub_btn .sns_tooltip { top: calc(100% + 2.6rem);}
@@ -144,4 +148,19 @@
 
 	.paging_wrap .paging .pc_paging {display: none;}
 	.paging_wrap .paging .mo_paging {display: block;}
+
+	.collection_list .item {flex:none; width: calc(50% - 0.75rem);}
+	.collection_list .group {gap:1.5rem;}
+	.collection_list .item.item3 {width: 100%; flex:1;}
+	.collection_list .item.item3 .order_list {gap:1rem;}
+	.collection_list .item.item3 .order_list > li {width: calc(50% - (1rem / 2));}
+}
+
+@media only screen and (max-width: 500px) { /* 모바일 */
+	.collection_list .item {flex:none; width: 100%;}
+	.collection_list .item ~ .item {margin-top: 4rem;}
+	.collection_list .group {gap:1.5rem;}
+	.collection_list .item.item3 {width: 100%; flex:1;}
+	.collection_list .item.item3 .order_list {gap:1rem;}
+	.collection_list .item.item3 .order_list > li {width: 100%;}
 }

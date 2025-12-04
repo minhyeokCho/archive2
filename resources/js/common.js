@@ -4,9 +4,7 @@ $(document).ready(function(){
 	$('.f_menu_wrap').length && initFooterMenuToggle(); //푸터 사이트
 	$('#header').length && headerLayer(); //헤더 레이어
 	$('.btn_share').length && sharePop(); //공유하기 레이어
-	$(window).scroll(function() {
-		handleHeaderFix();
-	});
+	$(window).scroll(function() {handleHeaderFix();});
 });
 
 function sharePop() {
@@ -30,7 +28,7 @@ function sharePop() {
 				$btnShare.removeClass('active-tooltip'); 
 			});
 		} else {
-			$tooltip.css({ 'visibility': 'hidden', 'display': 'block', 'left': '0', 'right': 'auto', 'transform': 'none' }); // 측정 시 기본 위치로 설정
+			$tooltip.css({ 'visibility': 'hidden', 'display': 'block', 'left': '0', 'right': 'auto', 'transform': 'none' });
 			var tooltipWidth = $tooltip.outerWidth();
 			$tooltip.css({ 'visibility': 'visible', 'display': 'none' }); 
 
