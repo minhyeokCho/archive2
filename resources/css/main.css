@@ -21,10 +21,13 @@
 .collection_area li a:hover figure.img img {transform: scale(1.15);}
 .collection_area li a .label {z-index: 1; position: absolute; padding: 1rem 1.5rem; left: 0; top: 2rem; font-size: 2.4rem; letter-spacing: -1px; color: #ffffff; font-weight: 500;}
 .collection_area li a .arr {z-index: 1; left: 1.6rem; bottom: 3rem; position: absolute; display: flex; align-items: center; gap:1.2rem;}
-.collection_area li a .arr i {display: flex; align-items: center; justify-content: center; width: 4.6rem; height: 4.6rem; border-radius: 50%; background-color: #5a5a5a;}
+.collection_area li a .arr i {position: relative; display: flex; align-items: center; justify-content: center; width: 4.6rem; height: 4.6rem; border-radius: 50%; background-color: #5a5a5a; }  
+.collection_area li a .arr i::after {display: block; content: ''; width: 1.9rem; height: 1.4rem; background: url(../images/common/arr_collection.svg) no-repeat center; background-size: 100% auto;}
 .collection_area li a .arr strong {font-size: 1.8rem;color: #282828; font-weight: bold;}
 .collection_area li a .arr span {color: #5a5a5a; display: block;}
 
+.collection_area .type_01 a .arr i::after { filter: invert(61%) sepia(44%) saturate(627%) hue-rotate(133deg) brightness(86%) contrast(93%);}
+.collection_area .type_02 a .arr i::after { filter: invert(65%) sepia(82%) saturate(5460%) hue-rotate(321deg) brightness(103%) contrast(94%);}
 .collection_area .type_01 .label {background-color: #2bacb0;}
 .collection_area .type_02 .label {background-color: #f75272;}
 

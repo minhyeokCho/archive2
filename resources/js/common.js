@@ -4,8 +4,20 @@ $(document).ready(function(){
 	$('.f_menu_wrap').length && initFooterMenuToggle(); //푸터 사이트
 	$('#header').length && headerLayer(); //헤더 레이어
 	$('.btn_share').length && sharePop(); //공유하기 레이어
+	$('.tab_btn').length && tabContent(); //탭 버튼
 	$(window).scroll(function() {handleHeaderFix();});
 });
+
+function tabContent() {
+	$('.tab_btn li').on('click', function(e) {
+		e.preventDefault();
+		let index = $(this).index();
+		$('.tab_btn li').removeClass('active');
+		$(this).addClass('active');
+		$('.tab_cont li').removeClass('active');
+		$('.tab_cont li').eq(index).addClass('active');
+	});
+}
 
 function sharePop() {
 	$('.sns_tooltip').hide();
@@ -16,18 +28,21 @@ function sharePop() {
 		var $parentLi = $btnShare.parent('li'); 
 		var $tooltip = $btnShare.siblings('.sns_tooltip'); 
 
-		var $btnArrowBefore = $btnShare.find('::before');
-		$('.sns_tooltip').not($tooltip).fadeOut('fast', function() {
-			$(this).css({ left: '', right: '', transform: 'none' });
-			$('.btn_share.active-tooltip').removeClass('active-tooltip');
-		});
+		$('.sns_tooltip').not($tooltip).each(function() {
+            $(this).fadeOut('fast', function() {
+                $(this).css({ left: '', right: '', transform: 'none' });
+            });
+        });
+        $('.btn_share.active-tooltip').not($btnShare).removeClass('active-tooltip');
+
 
 		if ($tooltip.is(':visible')) {
+            $btnShare.removeClass('active-tooltip'); 
 			$tooltip.fadeOut('fast', function() {
 				$tooltip.css({ left: '', right: '', transform: 'none' });
-				$btnShare.removeClass('active-tooltip'); 
 			});
 		} else {
+            $btnShare.addClass('active-tooltip');
 			$tooltip.css({ 'visibility': 'hidden', 'display': 'block', 'left': '0', 'right': 'auto', 'transform': 'none' });
 			var tooltipWidth = $tooltip.outerWidth();
 			$tooltip.css({ 'visibility': 'visible', 'display': 'none' }); 
@@ -39,7 +54,6 @@ function sharePop() {
 			var defaultTooltipLeft = liCenterAbs - (tooltipWidth / 2);
 			var tooltipFinalLeft = defaultTooltipLeft;
 
-			
 			if (tooltipFinalLeft < 10) {
 				tooltipFinalLeft = 10;
 			}
@@ -49,23 +63,22 @@ function sharePop() {
 			$tooltip.css({ 'left': (tooltipFinalLeft - liOffset) + 'px', 'right': 'auto', 'transform': 'none' });
 
 			$tooltip.fadeIn('fast');
-			$btnShare.addClass('active-tooltip');
 		}
 	});
 
 	$(document).on('click', function(e) {
 		if (!$(e.target).closest('.btn_share').length && !$(e.target).closest('.sns_tooltip').length) {
+            $('.btn_share.active-tooltip').removeClass('active-tooltip'); 
 			$('.sns_tooltip').fadeOut('fast', function() {
 				$(this).css({ left: '', right: '', transform: 'none' });
-				$('.btn_share.active-tooltip').removeClass('active-tooltip'); 
 			});
 		}
 	});
 
 	$(window).on('resize', function() {
+        $('.btn_share.active-tooltip').removeClass('active-tooltip'); 
 		$('.sns_tooltip').fadeOut('fast', function() {
 			$(this).css({ left: '', right: '', transform: 'none' });
-			$('.btn_share.active-tooltip').removeClass('active-tooltip'); 
 		});
 	});
 }
